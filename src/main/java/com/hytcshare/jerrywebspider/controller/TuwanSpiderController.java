@@ -11,12 +11,13 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.async.DeferredResult;
-
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 
 /**
  * tuwanSpider控制类
+ *
+ * @author jerryfu
  */
 @RestController
 @RequestMapping("/tuwanSpider")
@@ -24,11 +25,11 @@ public class TuwanSpiderController extends BaseController {
 
     @Value("${tuwan.welfareUrl}")
     private String welfareUrl;
-    @Value("${tuwan.tuwanImageStorePath}")
+    @Value("${tuwan.imageStorePath}")
     private String tuwanImageStorePath;
-    @Value("${tuwan.tuwanSpiderTaskName}")
+    @Value("${tuwan.spiderTaskName}")
     private String tuwanSpiderTaskName;
-    @Value("${tuwan.tuwanDownloadTaskName}")
+    @Value("${tuwan.downloadTaskName}")
     private String tuwanDownloadTaskName;
 
     @Autowired
